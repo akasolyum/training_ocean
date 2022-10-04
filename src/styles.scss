@@ -1,6 +1,6 @@
 @import 'scss/reset';
 @import 'scss/base';
-@import 'scss/hader';
+@import 'scss/header';
 
 
 body {
@@ -55,6 +55,7 @@ header {
       width: 100%;
       display: flex;
       justify-content: space-around;
+      align-items: center;
 
     }
 

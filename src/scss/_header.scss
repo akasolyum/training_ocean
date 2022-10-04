@@ -1,0 +1,105 @@
+body {
+
+    background-image: url(/src/img/back.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: top right;
+
+    .menu {
+        ul {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+
+            li {
+                line-height: 0;
+
+                &:last-child {
+                    color: rgb(255, 97, 23);
+
+                    &::after {
+                        content: "New";
+                        color: black;
+                        box-sizing: content-box;
+                        font-size: .8rem;
+                        line-height: 0;
+                        background-color: rgb(248, 197, 28);
+                        border-radius: 50rem;
+                        padding: .3rem .7rem;
+                        margin: .3rem;
+
+                        &:hover {
+                            color: rgb(248, 197, 28);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.acount {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    &_image {
+        position: relative;
+        border-radius: 100rem;
+        background-image: url(/src/img/profile.png);
+        background-repeat: no-repeat;
+        background-position: 0% 10%;
+        background-size: 110%;
+        height: 3.2rem;
+        width: 3.2rem;
+        border: solid 3px white;
+
+        &::before {
+            position: absolute;
+            overflow: unset;
+            content: "";
+            height: .6rem;
+            width: .6rem;
+            box-sizing: content-box;
+            background-color: rgb(248, 43, 28);
+            border-radius: 50rem;
+            border: solid 2px white;
+            top: 0px;
+            right: -.4rem;
+        }
+    }
+
+    &_btn {
+        position: relative;
+        padding: 1.1rem 1.8rem;
+        background: rgba(255, 255, 255, 0.788);
+        backdrop-filter: blur(7px);
+        border-radius: 5rem;
+        font-weight: 600;
+
+
+        &::before {
+
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            border-radius: 50px;
+            transition: all 0.5s;
+            border: .15rem solid transparent;
+            background: linear-gradient(120deg, rgb(255, 153, 0), rgb(235, 164, 34), rgb(113, 226, 113), rgb(75, 75, 243), rgb(154, 17, 182)) border-box;
+            -webkit-mask:
+                linear-gradient(#fff 0 0) padding-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+
+
+        }
+    }
+
+
+}
