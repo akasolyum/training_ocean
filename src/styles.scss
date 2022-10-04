@@ -1,29 +1,70 @@
 @import 'scss/reset';
 @import 'scss/base';
+@import 'scss/hader';
+
 
 body {
-  padding: 32px;
+  display: flex;
+
+  justify-content: center;
 }
 
-.hero {
-  height: 100%;
-  background: antiquewhite;
+header {
+  font-size: 1rem;
+  width: 90%;
+  min-width: 90%;
+  height: 8rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  overflow: hidden;
 
-  h1 {
-    font-size: calc(54vw * 100 / 1440);
-    margin-bottom: calc(12vw * 100 / 1440);
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+
+    ::after {
+      content: ' ';
+      position: absolute;
+      background-color: blue;
+      border-radius: 90000rem;
+      width: 0.5rem;
+      height: .5rem;
+      bottom: .4rem;
+      right: -0.6rem;
+    }
   }
 
-  p {
-    font-size: calc(24vw * 100 / 1440);
-  }
-}
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-a {
-  text-decoration: underline;
+    ul {
+      width: 40%;
+      display: flex;
+
+      li {
+        margin: 0 1rem 0 1rem;
+      }
+    }
+
+    .menu {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+    }
+
+    .acount {
+
+      display: flex;
+
+      &__image {
+        margin: 0 1rem 0 0;
+      }
+    }
+  }
 }
